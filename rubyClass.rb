@@ -1,8 +1,20 @@
 #!/usr/bin/ruby
 
-#My first class in Ruby <3
+# My first object class in Ruby <3
+
+# attr_reader => it reads the instance variable
+# attr_writer => it writes the instance variable with new value
+# attr_accessor => it reads or writes the instance variable
+
+# These attributes can simplify the set/get methods commonly used in oriented programming languages. They implement getter and setter methods.
+
+# All object data information is hidden from the outside. This is called encapsulation, and only the instantiate objects can access the data (if the object class has getter and setter methods). 
+
+# We can access data information directly by using getter and setter methods or attr_accessor/attr_reader/attr_writer
 
 class Person
+	attr_accessor :name, :gender, :country, :age
+
 	def initialize(name, gender, country, age)
 		@name = name
 		@gender = gender
@@ -16,38 +28,6 @@ class Person
 
 	def sleep
 		puts "#{@name} is zZzz just now. Dont disturb."
-	end
-
-	def name
-	  @name
-	end
-
-	def set_name=(name)
-	  @name = name
-	end
-	
-	def gender
-	  @gender
-	end
-
-	def set_gender=(gender)
-	  @gender = gender
-	end
-
-	def country
-	  @country
-	end
-
-	def set_country=(country)
-	  @country = country
-	end
-
-	def age
-	  @age
-	end
-
-	def set_age=(age)
-	  @age = age
 	end
 end
 
